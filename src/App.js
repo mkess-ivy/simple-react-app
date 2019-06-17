@@ -3,23 +3,35 @@ import Table from './Table'
 
 class App extends Component {
 	render() {
-		return (
+		const characters = [
+      {
+        name: 'Charlie',
+        job: 'Janitor',
+      },
+      {
+        name: 'Mac',
+        job: 'Bouncer',
+      },
+      {
+        name: 'Dee',
+        job: 'Aspiring actress',
+      },
+      {
+        name: 'Dennis',
+        job: 'Bartender',
+      },
+      {
+        name: 'Montier',
+        job: 'CEO',
+      },
+    ]
+
+    return (
 			<div className="container">
-				<Table />
+				<Table characterData={characters} />
 			</div>
 		)
 	}
-}
-
-const TableHeader = () => {
-  return (
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Job</th>
-      </tr>
-    </thead>
-  )
 }
 
 export default App
